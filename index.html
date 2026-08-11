@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Wardah 💗</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff7fb;
+      color: #493c47;
+      overflow-x: hidden;
+    }
+
+    /* ===== BACKGROUND ===== */
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 10% 10%, #ffd6e8 0 10%, transparent 30%),
+        radial-gradient(circle at 90% 20%, #e7d8ff 0 10%, transparent 30%),
+        radial-gradient(circle at 50% 100%, #ffe5c8 0 10%, transparent 35%),
+        #fff7fb;
+    }
+
+    .blob {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      filter: blur(10px);
+      opacity: .35;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .blob:nth-child(1) {
+      background: #ffb6d5;
+      top: 15%;
+      left: -50px;
+    }
+
+    .blob:nth-child(2) {
+      background: #cbb5ff;
+      right: -50px;
+      top: 45%;
+      animation-delay: 1.5s;
+    }
+
+    .blob:nth-child(3) {
+      background: #ffd0a8;
+      bottom: -60px;
+      left: 35%;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(20px,-30px) scale(1.08); }
+    }
+
+    /* ===== SECTIONS ===== */
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .container {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    /* ===== OPENING ===== */
+
+    .opening {
+      flex-direction: column;
+    }
+
+    .tiny {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a9829b;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 12vw, 100px);
+      line-height: .95;
+      color: #694f63;
+    }
+
+    .pink {
+      color: #e985ad;
+    }
+
+    .subtitle {
+      max-width: 550px;
+      margin: 25px auto;
+      line-height: 1.7;
+      color: #806c7a;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 700;
+    }
+
+    .main-btn {
+      padding: 15px 25px;
+      border-radius: 100px;
+      background: #e985ad;
+      color: white;
+      box-shadow: 0 10px 25px rgba(233,133,173,.3);
+      transition: .25s;
+    }
+
+    .main-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    .scroll {
+      margin-top: 50px;
+      font-size: 12px;
+      color: #ad94a6;
+      animation: bounce 1.8s infinite;
+    }
+
+    @keyframes bounce {
+      50% { transform: translateY(8px); }
+    }
+
+    /* ===== BIRTHDAY CARD ===== */
+
+    .card {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.9);
+      backdrop-filter: blur(18px);
+      padding: clamp(25px, 6vw, 55px);
+      border-radius: 35px;
+      box-shadow: 0 25px 70px rgba(100,70,100,.12);
+    }
+
+    .cake {
+      font-size: 70px;
+      animation: cake 2s ease-in-out infinite;
+    }
+
+    @keyframes cake {
+      0%,100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(35px, 8vw, 65px);
+      margin: 15px 0;
+      color: #694f63;
+    }
+
+    .age {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 100px;
+      background: #ffe0ec;
+      color: #c45e89;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* ===== MESSAGE ===== */
+
+    .message-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .message-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 8vw, 65px);
+      margin-bottom: 25px;
+    }
+
+    .message {
+      background: rgba(255,255,255,.65);
+      border-radius: 30px;
+      padding: 30px;
+      line-height: 1.9;
+      text-align: left;
+      box-shadow: 0 15px 40px rgba(100,70,100,.08);
+    }
+
+    .message p {
+      margin-bottom: 15px;
+    }
+
+    /* ===== FUN FACTS ===== */
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .fact {
+      padding: 25px 15px;
+      border-radius: 25px;
+      background: rgba(255,255,255,.65);
+      transition: .25s;
+    }
+
+    .fact:hover {
+      transform: translateY(-7px) rotate(1deg);
+    }
+
+    .fact span {
+      display: block;
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .fact strong {
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .fact small {
+      color: #907c8a;
+    }
+
+    /* ===== GALLERY ===== */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .photo {
+      min-height: 220px;
+      border-radius: 28px;
+      background: linear-gradient(135deg,#ffd9e8,#eee1ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      box-shadow: 0 15px 35px rgba(100,70,100,.08);
+      transition: .3s;
+    }
+
+    .photo:hover {
+      transform: rotate(-2deg) scale(1.03);
+    }
+
+    .photo:nth-child(2) {
+      background: linear-gradient(135deg,#fff0d6,#ffd8e9);
+    }
+
+    .photo:nth-child(3) {
+      background: linear-gradient(135deg,#dcecff,#eadbff);
+    }
+
+    /* ===== SURPRISE ===== */
+
+    .surprise {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .gift {
+      font-size: 100px;
+      cursor: pointer;
+      display: inline-block;
+      animation: gift 1.5s infinite;
+    }
+
+    @keyframes gift {
+      0%,100% { transform: rotate(0); }
+      25% { transform: rotate(-8deg); }
+      75% { transform: rotate(8deg); }
+    }
+
+    #secret {
+      display: none;
+      margin-top: 25px;
+      padding: 30px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.8);
+      animation: pop .5s ease;
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: scale(.7);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    #secret h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: #d66d99;
+      margin-bottom: 15px;
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #a58f9f;
+      font-size: 13px;
+    }
+
+    /* ===== CONFETTI ===== */
+
+    .confetti {
+      position: fixed;
+      width: 9px;
+      height: 14px;
+      top: -20px;
+      z-index: 999;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+
+    /* ===== MOBILE ===== */
+
+    @media(max-width:650px) {
+      .facts,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        min-height: 170px;
+      }
+
+      .message {
+        padding: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bg">
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+</div>
+
+<!-- OPENING -->
+<section class="opening">
+  <div class="container">
+
+    <div class="tiny">a tiny website for someone special ✨</div>
+
+    <h1>
+      Hey,<br>
+      <span class="pink">Wardah.</span>
+    </h1>
+
+    <p class="subtitle">
+      Ada sesuatu yang harus kamu buka hari ini...
+      Tenang, bukan tugas. Bukan tagihan. 😭
+      Cuma sedikit ucapan dari seseorang yang lupa kalau hari ini kamu bertambah level.
+    </p>
+
+    <button class="main-btn" onclick="goTo('birthday')">
+      Buka sesuatu 💌
+    </button>
+
+    <div class="scroll">
+      ↓ scroll kalau berani ↓
+    </div>
+
+  </div>
+</section>
+
+
+<!-- BIRTHDAY -->
+<section id="birthday">
+  <div class="container">
+
+    <div class="card">
+
+      <div class="cake">🎂</div>
+
+      <div class="age">
+        LEVEL 18 UNLOCKED 🔓
+      </div>
+
+      <h2>
+        Happy Birthday,<br>
+        <span class="pink">Wardah!</span>
+      </h2>
+
+      <p class="subtitle">
+        Selamat datang di umur 18 tahun.
+        Umur di mana kamu sudah cukup dewasa untuk mengambil keputusan...
+        tapi masih cukup muda untuk bilang,
+        <b>"besok aja deh."</b> 😭
+      </p>
+
+      <button class="main-btn" onclick="goTo('message')">
+        Lanjut → 💗
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- MESSAGE -->
+<section id="message">
+  <div class="container">
+
+    <div class="message-box">
+
+      <div class="tiny">a little message</div>
+
+      <h2>
+        Ini serius.<br>
+        <span class="pink">Sebentar aja.</span>
+      </h2>
+
+      <div class="message">
+
+        <p>
+          Happy birthday, Wardah! 🥳💗
+        </p>
+
+        <p>
+          Hari ini kamu resmi berumur <b>18 tahun</b>.
+          Selamat yaaa! Kamu berhasil survive sampai titik ini.
+          Achievement unlocked fr fr. 🏆
+        </p>
+
+        <p>
+          Semoga di umur yang baru ini kamu makin banyak
+          ketemu hal-hal yang bikin kamu senyum,
+          makin banyak momen yang worth remembering,
+          dan makin sedikit ketemu manusia yang bikin
+          <i>"ya Allah sabar aku diuji"</i>. 😭
+        </p>
+
+        <p>
+          Semoga semua hal baik yang kamu harapkan
+          pelan-pelan datang ke hidup kamu.
+          Kalau belum datang sekarang, mungkin lagi
+          <b>OTW</b>. Jangan lupa sabar, paket aja butuh waktu. 📦
+        </p>
+
+        <p>
+          Tetap jadi Wardah yang lucu, random,
+          menyenangkan, dan tentunya jangan lupa bahagia.
+          Karena hidup sudah cukup serius,
+          jadi sesekali kita perlu ketawa karena hal nggak jelas. 😭
+        </p>
+
+        <p>
+          Pokoknya...
+          <b>happy 18th birthday, Wardah! 💐</b>
+        </p>
+
+        <p>
+          Semoga tahun ini jadi salah satu chapter
+          terbaik dalam hidup kamu. ✨
+        </p>
+
+      </div>
+
+      <div class="facts">
+
+        <div class="fact">
+          <span>🎂</span>
+          <strong>18 YEARS</strong>
+          <small>officially unlocked</small>
+        </div>
+
+        <div class="fact">
+          <span>✨</span>
+          <strong>100% CUTE</strong>
+          <small>data belum tentu valid</small>
+        </div>
+
+        <div class="fact">
+          <span>🧠</span>
+          <strong>+1 LEVEL</strong>
+          <small>wisdom loading...</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- MINI GALLERY -->
+<section>
+  <div class="container">
+
+    <div class="tiny">little memories</div>
+
+    <h2 style="font-family:'Playfair Display';font-size:clamp(38px,8vw,65px);">
+      Some <span class="pink">good vibes.</span>
+    </h2>
+
+    <p class="subtitle">
+      Bagian ini bisa kamu isi foto-foto Wardah nanti 📸
+    </p>
+
+    <div class="gallery">
+
+      <div class="photo">
+        📸
+      </div>
+
+      <div class="photo">
+        🧸
+      </div>
+
+      <div class="photo">
+        🌷
+      </div>
+
+    </div>
+
+    <small style="color:#a58f9f;">
+      *placeholder dulu, foto asli bisa kamu masukin sendiri ;)
+    </small>
+
+  </div>
+</section>
+
+
+<!-- SURPRISE -->
+<section>
+  <div class="container">
+
+    <div class="surprise">
+
+      <div class="tiny">
+        wait... there's more 👀
+      </div>
+
+      <h2 style="font-family:'Playfair Display';font-size:clamp(40px,9vw,70px);">
+        Ada <span class="pink">surprise.</span>
+      </h2>
+
+      <p class="subtitle">
+        Jangan bilang kamu mau langsung pergi.
+        Klik hadiahnya dulu. 🎁
+      </p>
+
+      <div class="gift" onclick="openGift()">
+        🎁
+      </div>
+
+      <div id="secret">
+
+        <h2>WOOO! 🎉</h2>
+
+        <p style="line-height:1.8;">
+          Selamat ulang tahun sekali lagi, Wardah! 💗
+          <br><br>
+          Semoga semua wishlist kamu satu-satu
+          berubah dari <b>"manifesting"</b>
+          menjadi <b>"OMG IT HAPPENED."</b> ✨
+          <br><br>
+          Jangan lupa traktirannya.
+          Ini bukan bagian dari ucapan,
+          ini adalah <b>syarat dan ketentuan berlaku.</b> 😭
+        </p>
+
+        <br>
+
+        <button class="main-btn" onclick="celebrate()">
+          PARTY TIME 🎉
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<<footer>
+  Made with 💗, sedikit kreativitas, dan banyak doa untuk Wardah.
+  <br><br>
+
+  <span style="font-size:12px;">
+    With love & good vibes from
+  </span>
+
+  <br>
+
+  <strong style="
+    font-family:'Playfair Display', serif;
+    font-size:24px;
+    color:#d66d99;
+  ">
+    Andre Firnando Lubis 🌷
+  </strong>
+
+  <br>
+
+  <span style="font-size:12px;">
+    © Birthday Edition — 18 ✨
+  </span>
+</footer>
+
+
+<script>
+
+  /* ===== SMOOTH SCROLL ===== */
+
+  function goTo(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+
+  /* ===== GIFT ===== */
+
+  function openGift() {
+
+    const secret = document.getElementById("secret");
+
+    secret.style.display = "block";
+
+    setTimeout(() => {
+      secret.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }, 100);
+
+    confetti();
+  }
+
+
+  /* ===== CONFETTI ===== */
+
+  function confetti() {
+
+    const emojis = ["💗","✨","🌸","🎉","💐","⭐","🎀"];
+
+    for(let i = 0; i < 80; i++) {
+
+      const piece = document.createElement("div");
+
+      piece.className = "confetti";
+
+      piece.innerText =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+      piece.style.left =
+        Math.random() * 100 + "vw";
+
+      piece.style.fontSize =
+        (10 + Math.random() * 15) + "px";
+
+      piece.style.animationDuration =
+        (2 + Math.random() * 4) + "s";
+
+      piece.style.animationDelay =
+        Math.random() * 1.5 + "s";
+
+      document.body.appendChild(piece);
+
+      setTimeout(() => {
+        piece.remove();
+      }, 7000);
+
+    }
+
+  }
+
+
+  /* ===== PARTY ===== */
+
+  function celebrate() {
+
+    confetti();
+
+    setTimeout(confetti, 700);
+    setTimeout(confetti, 1400);
+
+    alert(
+      "HAPPY BIRTHDAY WARDAH!!! 🎂💗✨\n\n" +
+      "18 tahun cuy 😭\n" +
+      "Semoga tahun ini full happiness + good things!"
+    );
+
+  }
+
+</script>
+
+</body>
+</html>
